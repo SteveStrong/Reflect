@@ -1,0 +1,46 @@
+[
+  {
+    "Id": "some bad fancy ID",
+    "Name": "xxxxxxxxxxxxxxxxxxxxx",
+    "dateFiled": "2017-02-03T00:00:00Z",
+    "dateOfOccurrance": "2017-02-04T00:00:00Z",
+    "grievant": {
+      "name": "r4r4",
+      "email": "tt",
+      "phone": "tttt"
+    },
+    "supervisor": {
+      "name": "r4r4",
+      "email": "rrr",
+      "phone": "rr"
+    },
+    "instituteCenter": "NIAID",
+    "grievance": {
+      "DOL": true
+    },
+    "remedy": {
+      "AOL": true
+    },
+    "certifyCorrect": true
+  },
+  {
+    "dateFiled": "2017-02-03T00:00:00Z",
+    "dateOfOccurrance": "2017-02-04T00:00:00Z",
+    "grievant": {
+      "name": "tgt",
+      "email": "gtg",
+      "phone": "gggg"
+    },
+    "supervisor": {
+      "name": "gtgt",
+      "email": "gtg",
+      "phone": "gtgt"
+    },
+    "instituteCenter": "NINDS",
+    "remedy": {
+      "AOL": true,
+      "ROL": true
+    },
+    "certifyCorrect": true
+  }
+]
