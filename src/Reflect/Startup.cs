@@ -43,12 +43,6 @@ namespace Reflect
             loggerFactory.AddDebug();
 
             app.UseStaticFiles();
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider = new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), @"MyStaticFiles")),
-                RequestPath = new PathString("/StaticFiles")
-            });
 
             //https://github.com/domaindrivendev/Ahoy
             // Enable middleware to serve generated Swagger as a JSON endpoint
