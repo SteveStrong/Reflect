@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Net.Http;
+using HtmlAgilityPack;
 
 namespace Reflect.Controllers
 {
@@ -78,6 +80,8 @@ namespace Reflect.Controllers
         }
 
 
+        
+
         // GET: api/Config/Grievance
         [HttpGet]
         [Route("Doc")]
@@ -101,6 +105,26 @@ namespace Reflect.Controllers
                 return BadRequest(ex);
             }
 
+        }
+
+
+        [HttpGet]
+        [Route("GirlGamers")]
+        public async Task<String> GetGirlGamers()
+        {
+            var path = @"https://www.reddit.com/r/GirlGamers/comments/5rvftn/did_a_particular_person_get_you_started_in_gaming/";
+
+            String product = null;
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(path);
+            if (response.IsSuccessStatusCode)
+            {
+                product = await response.Content.ReadAsStringAsync();
+                var html = new HtmlDocument();
+                return product;
+            }
+            return product;
         }
 
     }
